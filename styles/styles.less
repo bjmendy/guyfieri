@@ -1,0 +1,44 @@
+@base: #fff791;
+@yellow: #ffde6b;
+@orange: #ffc88e;
+@black: #000000;
+@red: #db1e1e;
+@verdana: Verdana, Sans-Serif; 
+@gamefont: {
+  font-family:'Press Start 2P';
+  src:font-url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+  src:font-url('https://fonts.googleapis.com/css?family=Press+Start+2P') format('embedded-opentype'),
+  
+  ...
+}
+
+.header img {
+  float: left;
+  width: 200px;
+  height: 200px;
+  h1 {
+  position: relative;
+  font-family: @gamefont;
+  top: 18px;
+  left: 10px;
+  color: @red;
+  }
+}
+
+body {
+	margin: 10%;
+	background-image: -webkit-linear-gradient(0deg, @yellow, @orange);
+	background-image: -moz-linear-gradient(0deg, @yellow, @orange);
+	background-image: -o-linear-gradient(0deg, @yellow, @orange);
+
+}
+
+.btn {
+	background-image: url("wing.png");
+	padding: 10px;
+	font-family: @gamefont;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
