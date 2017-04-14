@@ -7,24 +7,25 @@
 <body>
 <div id="container">
 	<div id="header">
-		<h1 align="center">Welcome to Flavortown!</h1>
-		<img src="../public/styles/photos/convertible.png"/>
+		<h1 align="center" class="animated swing">Welcome to Flavortown!</h1>
 	</div>
 
-		<h2 id="hungerMeter">Hunger: 10</h2>
-		<h2 id="happinessMeter">Happiness: 10</h2>
-		<h2 id="sleepMeter">Sleeping: </h2>
-		<h2 id="ageMeter">Age: </h2>
+<div id="h2meters" align="center">
+	<h2 id="hungerMeter">Hunger: 10</h2>
+	<h2 id="sleepMeter">Sleeping: </h2>
+	<h2 id="happinessMeter">Happiness: 10</h2>
+	<h2 id="ageMeter">Age: </h2>
+</div>
 
-    <div class="toma" id="1" align="center"><img src="../public/styles/photos/fierinormal.png"/></div>
-
-    <div class="toma hidden" id="2" align="center"><img src="../public/styles/photos/fieriexcited.png"/></div>
+    <div class="toma animated tada" id="one" align="center"></div>
+<!--     <div class="toma hidden animated tada" id="two" align="center"></div> -->
 
 <br>
-		<button id="feedbtn" class="btn animated tada">Feed</button>
-		<button id="happinessbtn" class="btn animated tada">Happiness</button>
-		<button id="sleepbtn" class="btn animated tada">Sleep</button>
-
+<div id="chickenwingcontainer">
+	<button id="feedbtn" class="btn animated tada">Feed</button>
+	<button id="happinessbtn" class="btn animated tada">Happiness</button>
+	<button id="sleepbtn" class="btn animated tada">Sleep</button>
+</div>
 
 </div>
 <script src="js/app.js"></script>

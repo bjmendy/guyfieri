@@ -6,43 +6,48 @@ h1 {
   color: #db1e1e;
 }
 body {
-  margin: 10%;
+  margin: 5%;
   background-image: -webkit-linear-gradient(0deg, #fff9af, #ffb23c);
   background-image: -moz-linear-gradient(0deg, #fff9af, #ffb23c);
   background-image: -o-linear-gradient(0deg, #fff9af, #ffb23c);
   font-family: 'Press Start 2P', Sans-Serif;
 }
+#container {
+  width: 740px;
+  height: 660px;
+  margin-left: 13%;
+  margin-top: -5%;
+  padding: 1px;
+}
 #bigcontainer2 {
   width: 450px;
   height: 450px;
-  margin-left: 18%;
+  margin-left: 25%;
 }
 #logincontainer {
+  width: 450px;
+  height: 450px;
+  margin-left: 25%;
+}
+#loginwordscontainer {
   height: 250px;
-  width: 550px;
+  width: 500px;
   padding: 15px;
   margin-left: 8%;
   margin-right: 19%;
   margin-top: 19%;
   margin-bottom: 10%;
-  clear: both;
-}
-#loginwordscontainer {
-  width: 350px;
-  height: 350px;
-  clear: both;
 }
 #flavortownloginimage {
-  height: 228px;
-  width: 250px;
   -ms-transform: rotate(15deg);
   /* IE 9 */
   -webkit-transform: rotate(15deg);
   /* Chrome, Safari, Opera */
   transform: rotate(15deg);
+  height: 228px;
+  width: 250px;
   float: right;
   background-image: url("photos/image.149188654.9882.u1.png");
-  clear: both;
 }
 #registerheadercontainer {
   height: 250px;
@@ -57,7 +62,7 @@ body {
   background-color: transparent;
   border: none;
   background-image: url("photos/wing.png");
-  padding: 10px;
+  padding: 1px;
   height: 208px;
   width: 250px;
   cursor: pointer;
@@ -65,7 +70,7 @@ body {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
 }
 #flavortownimage {
   -ms-transform: rotate(15deg);
@@ -78,20 +83,68 @@ body {
   float: right;
   background-image: url("photos/image.149188654.9882.u1.png");
 }
+#header {
+  margin-left: 15%;
+}
+#h2meters {
+  margin-left: 15%;
+}
 #registerh1 {
   float: left;
   width: 100px;
   height: 70px;
 }
-#signinorregister {
+#loginh2 {
   float: left;
-  width: 200px;
+  width: 530px;
   height: 70px;
-  margin-left: 22%;
 }
 #loginh1 {
   float: left;
-  width: 250px;
-  height: 25px;
-  margin-left: 17%;
+  width: 100px;
+  height: 70px;
+}
+#bottomhalfcontainer {
+  margin-left: 15%;
+}
+#one {
+  background-image: url("photos/fierinormal.png");
+  width: 356px;
+  height: 400px;
+  margin-left: 30%;
+  margin-bottom: -4%;
+}
+#hungerMeter {
+  display: inline;
+  padding: 5px;
+  margin-left: 10%;
+}
+#happinessMeter {
+  display: inline;
+  padding: 5px;
+}
+#sleepMeter {
+  display: inline;
+  padding: 5px;
+}
+#ageMeter {
+  display: inline;
+  padding: 5px;
+}
+#chickenwingcontainer {
+  margin-left: 7%;
+  width: 785px;
+  height: 150px;
+}
+#feedbtn {
+  display: inline;
+  background-repeat: no-repeat;
+}
+#happinessbtn {
+  display: inline;
+  background-repeat: no-repeat;
+}
+#sleepbtn {
+  display: inline;
+  background-repeat: no-repeat;
 }
