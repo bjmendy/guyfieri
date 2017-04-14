@@ -8,8 +8,8 @@ class ApplicationController < Sinatra::Base
 # 	DB_NAME = db.path[1..-1]
 
 ActiveRecord::Base.establish_connection(
-	:adapter => 'postgresql'
-	:database => 'users'
+	:adapter => 'postgresql',
+	:database => 'flavortown'
 	# :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
 	# :host     => db.host,
  #    :port     => db.port,

@@ -1,0 +1,97 @@
+h1 {
+  position: relative;
+  font-family: 'Press Start 2P', Sans-Serif;
+  top: 18px;
+  left: 10px;
+  color: #db1e1e;
+}
+body {
+  margin: 10%;
+  background-image: -webkit-linear-gradient(0deg, #fff9af, #ffb23c);
+  background-image: -moz-linear-gradient(0deg, #fff9af, #ffb23c);
+  background-image: -o-linear-gradient(0deg, #fff9af, #ffb23c);
+  font-family: 'Press Start 2P', Sans-Serif;
+}
+#bigcontainer2 {
+  width: 450px;
+  height: 450px;
+  margin-left: 18%;
+}
+#logincontainer {
+  height: 250px;
+  width: 550px;
+  padding: 15px;
+  margin-left: 8%;
+  margin-right: 19%;
+  margin-top: 19%;
+  margin-bottom: 10%;
+  clear: both;
+}
+#loginwordscontainer {
+  width: 350px;
+  height: 350px;
+  clear: both;
+}
+#flavortownloginimage {
+  height: 228px;
+  width: 250px;
+  -ms-transform: rotate(15deg);
+  /* IE 9 */
+  -webkit-transform: rotate(15deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(15deg);
+  float: right;
+  background-image: url("photos/image.149188654.9882.u1.png");
+  clear: both;
+}
+#registerheadercontainer {
+  height: 250px;
+  width: 500px;
+  padding: 15px;
+  margin-left: 8%;
+  margin-right: 19%;
+  margin-top: 19%;
+  margin-bottom: 10%;
+}
+.btn {
+  background-color: transparent;
+  border: none;
+  background-image: url("photos/wing.png");
+  padding: 10px;
+  height: 208px;
+  width: 250px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', Sans-Serif;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#flavortownimage {
+  -ms-transform: rotate(15deg);
+  /* IE 9 */
+  -webkit-transform: rotate(15deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(15deg);
+  height: 228px;
+  width: 250px;
+  float: right;
+  background-image: url("photos/image.149188654.9882.u1.png");
+}
+#registerh1 {
+  float: left;
+  width: 100px;
+  height: 70px;
+}
+#signinorregister {
+  float: left;
+  width: 200px;
+  height: 70px;
+  margin-left: 22%;
+}
+#loginh1 {
+  float: left;
+  width: 250px;
+  height: 25px;
+  margin-left: 17%;
+}

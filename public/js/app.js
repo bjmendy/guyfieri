@@ -80,18 +80,18 @@ feed.addEventListener('click', function(){
 });
 
 //UPDATE THE FRAME???
-var i = 1;
-setInterval(function(){
-	var firstDiv = document.getElementById(i);
-	if (i % 2 === 0){
-		i = 1;
-	}else{
-		i += 1;
-	}
-	var secondDiv = document.getElementById(i);
-		firstDiv.classList.add("hidden");
-	secondDiv.classList.remove("hidden");
-}, 6000)
+// var i = 1;
+// setInterval(function(){
+// 	var firstDiv = document.getElementById(i);
+// 	if (i % 2 === 0){
+// 		i = 1;
+// 	}else{
+// 		i += 1;
+// 	}
+// 	var secondDiv = document.getElementById(i);
+// 	firstDiv.classList.add("hidden");
+// 	secondDiv.classList.remove("hidden");
+// }, 6000)
 
 ////function to evolve////add a label for happiness//
 var  happiness = document.getElementById("happinessbtn");
