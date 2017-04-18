@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>My Chat Session</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<script type="text/javascript">
+function login(){
+	var name = document.getElementById('name').value;
+	var password = document.getElementById('password').value;
+	if(name=="admin" && password=="password") {
+		document.getElementById('chat').style.display="block";
+		document.getElementById('login').style.display="none";
+	}
+	else {
+		alert("Wrong user name or password");
+	}
+}
+function chat(){
+	document.getElementById('chat_text').value="";
+	document.getElementById('chat_message').style.display="block";
+	setTimeout("document.getElementById('chat_message').style.display='none'",1500);
+	setTimeout("document.getElementById('response').style.display='block'",14980);
+	setTimeout("document.getElementById('response').innerHTML='<p>Hello? Who is this? Please stop sending me messages!!!</p>'",15000);
+}
+</script>
+<style type="text/css">
+#login label {display:block;float:left;width:75px;text-align:right;clear:left;margin-right:5px;}
+#name, #password {float:left;width:140px;}
+#submit {display:block;clear:left;margin-left:164px;}
+#login form div {width:230px;}
+#chat, #response {border:1px solid black;padding:10px;background-color:gainsboro;float:left;display:none;width:304px;margin-bottom:10px;}
+#login {border:1px solid black;float:left;padding:10px;}
+#chat_message{float:right;display:none;}
+#response {clear:left;}
+#response p {background-color:#fff;border:1px solid gray;height:238px;margin:0;padding:10px;}
+</style>
+</head>
+<body>
+<div id="login">
+  <form>
+    <div>
+      <label>Name:</label><input type="text" name="name" id="name" value="admin" />
+      <label>Password:</label><input type="password" name="password" id="password" value="password" />
+      <input type="submit" name="submit" id="submit" value="Log In" onclick="login();return false;" />
+    </div>
+  </form>
+</div>
+<div id="chat">
+  <h1>Chat Room</h1>
+  <room style="trendy" size="moderate" temperature="comfortable" furnishings="spartan">
+    <chat type="secure" action="discuss">
+      <post>
+        <textarea type="chat" id="chat_text" style="width:300px;height:150px;"></textarea>
+      </post>
+      <br />
+      <span id="chat_message">Message Sent!</span>
+      <input type="button" name="chat" value="Chat Now" onclick="chat();return false;" />
+    </chat>
+  </room>
+</div>
+<div id="response"></div>
+</body>
+</html>

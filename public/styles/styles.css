@@ -1,3 +1,71 @@
+/* code that is here, until the first @media block, will apply to any screen size */
+#somethingorother {
+  width: 800px ;
+}
+@media screen and (max-width: 320px) {
+  /* comes into effect for screens less than or equal to 320 pixels */
+  #somethingorother {
+    width: 120px ;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  /* comes into effect for screens between 321 and 480 pixels (inclusive) */
+  #somethingorother {
+    width: 320px ;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* comes into effect for screens larger than or equal to 481 pixels */
+  #somethingorother {
+    width: 480px ;
+  }
+}
+/* code that is here will apply to any screen size */
+/* code that is here will apply to any screen size */
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: #000000;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
 h1 {
   position: relative;
   font-family: 'Press Start 2P', Sans-Serif;
@@ -18,6 +86,11 @@ body {
   margin-left: 13%;
   margin-top: -5%;
   padding: 1px;
+}
+#speechbubble {
+  margin-left: 12%;
+  color: #000000;
+  text-align: center;
 }
 #bigcontainer2 {
   width: 450px;
@@ -86,6 +159,25 @@ body {
 #header {
   margin-left: 15%;
 }
+#hamburger {
+  height: 195px;
+  width: 195px;
+  background-image: url("photos/burger-outline-filled.png");
+}
+#hamburger:hover {
+  cursor: pointer;
+}
+#hamburgermenu {
+  height: 50%;
+  width: 25%;
+  overflow: auto;
+}
+#hamburgermenu li {
+  list-style: none;
+}
+#hamburgermenu li a {
+  text-decoration: none;
+}
 #h2meters {
   margin-left: 15%;
 }
@@ -113,6 +205,17 @@ body {
   height: 400px;
   margin-left: 30%;
   margin-bottom: -4%;
+}
+#two {
+  background-image: url("photos/fieriexcited.png");
+  width: 261px;
+  height: 400px;
+  margin-left: 30%;
+  margin-bottom: -4%;
+  z-index: 2;
+}
+.hidden {
+  display: none;
 }
 #hungerMeter {
   display: inline;

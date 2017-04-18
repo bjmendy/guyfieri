@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>FLAVORTOWN</title>
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
@@ -8,17 +9,110 @@
 <div id="container">
 	<div id="header">
 		<h1 align="center" class="animated swing">Welcome to Flavortown!</h1>
+		<span align="right" id="hamburger"></span>
+		<div align="right" class="hidden" id="hamburgermenu">
+			<h2>Guy Fieri's Favorite Chicago Spots</h2>
+			<ul>
+				<li>
+					<a href="http://hopleaf.com" target="_blank">Hopleaf Bar</a>
+				</li>
+				<li>
+					<a href="http://bngrill.com" target="_blank">bopNgrill</a>
+				</li>
+				<li>
+					<a href="http://irazuchicago.com" target="_blank">Irazu</a>
+				</li>
+				<li>
+					<a href="http://nanaorganic.com" target="_blank">Nana</a>
+				</li>
+				<li>
+					<a href="http://www.tufanosrestaurant.com" target="_blank">Tufano's Vernon Park Tap</a>
+				</li>
+				<li>
+					<a href="http://bigandlittleschicago.com" target="_blank">BIG &amp; littles</a>
+				</li>
+				<li>
+					<a href="http://chicagobrauhaus.com" target="_blank">Chicago Brauhaus</a>
+				</li>
+				<li>
+					<a href="#">Paradise Pup</a>
+				</li>
+				<li>
+					<a href="http://www.chilambalamchicago.com" target="_blank">Chilam Balam</a>
+				</li>
+				<li>
+					<a href="http://www.whitepalacegrill.com" target="_blank">White Palace Grill</a>
+				</li>
+				<li>
+					<a href="http://smoquebbq.com" target="_blank">Smoque</a>
+				</li>
+				<li>
+					<a href="http://www.rexitalianfoods.com" target="_blank">Rex Italian Foods</a>
+				</li>
+				<li>
+					<a href="http://dmkburgerbar.com" target="_blank">DMK Burger Bar</a>
+				</li>
+				<li>
+					<a href="http://tasteofperu.com" target="_blank">Taste of Peru</a>
+				</li>
+				<li>
+					<a href="http://www.hackneysprintersrow.net" target="_blank">Hackney's</a>
+				</li>
+				<li>
+					<a href="http://90milescubancafe.com" target="_blank">90 Miles Cuban Cafe</a>
+				</li>
+				<li>
+					<a href="http://www.glennsdiner.com/" target="_blank">Glenn's Diner</a>
+				</li>
+				<li>
+					<a href="http://vitoandnicks.com" target="_blank">Vito &amp; Nick's Pizzeria</a>
+				</li>
+				<li>
+					<a href="http://www.cemitaspuebla.com" target="_blank">Cemitas Puebla</a>
+				</li>
+				<li>
+					<a href="http://honkytonkbbqchicago.com" target="_blank">Honky Tonk BBQ</a>
+				</li>
+				<li>
+					<a href="http://www.trekronorrestaurant.com/#/home" target="_blank">Tre Kronor</a>
+				</li>
+				<li>
+					<a href="http://www.garifunaflava.com" target="_blank">Garifuna Flava</a>
+				</li>
+				<li>
+					<a href="http://www.chuckscafe.com/Home.html" target="_blank">Chuck's Southern Comforts Cafe</a>
+				</li>
+				<li>
+					<a href="http://kumascorner.com" target="_blank">Kuma's Corner</a>
+				</li>
+			</ul>
+		</div>
 	</div>
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Welcome to Flavortown! This is your pet, Guy Fieri, and he lives here. Just like you, he needs to eat and sleep in order to be on Food Network's "Diners, Drive-ins and Dives." Make sure you take care of him or else he could turn into a mean chef!</p>
+  </div>
+
+</div>
+
+<div id="speechbubble"></div>
+<h1 id="rip"></h1>
+
 <div id="h2meters" align="center">
-	<h2 id="hungerMeter">Hunger: 10</h2>
-	<h2 id="sleepMeter">Sleeping: </h2>
-	<h2 id="happinessMeter">Happiness: 10</h2>
-	<h2 id="ageMeter">Age: </h2>
+	<h2 id="currentForm">Current Form: <span id="currentformtext"></span></h2>
+	<h2 id="hungerMeter">Hunger: <span id="hungernumber"></span></h2>
+	<h2 id="sleepMeter">Sleeping: <span id="issleeping"></span></h2>
+	<h2 id="happinessMeter">Happiness: <span id="happinessnumber"></span></h2>
+	<h2 id="ageMeter">Age: <span id="agenumber"></span></h2>
 </div>
 
     <div class="toma animated tada" id="one" align="center"></div>
-<!--     <div class="toma hidden animated tada" id="two" align="center"></div> -->
+    <div class="toma hidden animated tada" id="two" align="center"></div>
 
 <br>
 <div id="chickenwingcontainer">
