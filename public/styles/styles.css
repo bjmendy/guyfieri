@@ -70,7 +70,7 @@ h1 {
   position: relative;
   font-family: 'Press Start 2P', Sans-Serif;
   top: 18px;
-  left: 10px;
+  left: 9%;
   color: #db1e1e;
 }
 body {
@@ -83,7 +83,7 @@ body {
 #container {
   width: 740px;
   height: 660px;
-  margin-left: 13%;
+  margin-left: 10%;
   margin-top: -5%;
   padding: 1px;
 }
@@ -160,8 +160,10 @@ body {
   margin-left: 15%;
 }
 #hamburger {
-  height: 195px;
-  width: 195px;
+  height: 230px;
+  width: 256px;
+  float: right;
+  clear: both;
   background-image: url("photos/burger-outline-filled.png");
 }
 #hamburger:hover {
@@ -170,7 +172,9 @@ body {
 #hamburgermenu {
   height: 50%;
   width: 25%;
-  overflow: auto;
+  overflow: scroll;
+  margin-left: 60%;
+  float: right;
 }
 #hamburgermenu li {
   list-style: none;
@@ -179,7 +183,7 @@ body {
   text-decoration: none;
 }
 #h2meters {
-  margin-left: 15%;
+  margin-left: 13%;
 }
 #registerh1 {
   float: left;

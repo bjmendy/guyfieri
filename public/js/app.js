@@ -67,38 +67,61 @@ var tomagotchi ={
 		} else if (this.age === 35){
 			this.currentForm = "Gordon Ramsay";
 		}
+		$('#hungernumber').text(this.hungerValue);
 		$('#currentformtext').text(this.currentForm);
+		$('#issleeping').text(this.isSleeping);
 		$('#agenumber').text(this.age);
+		$('#happinessnumber').text(this.happiness);
 	},
 	wakeUp: function(){
 		this.isSleeping = false;
 		this.happiness -= 1;
 		this.age += 2;
 		// $('#issleeping').empty();
-		$('#issleeping').text("No");
+		$('#issleeping').text("false");
 		// $('#speechbubble').empty();
 		$('#speechbubble').text("Up and at 'em here in Flavortown!");
 		console.log("Up and at 'em here in Flavortown!");
+		$('#hungernumber').text(this.hungerValue);
+		$('#currentformtext').text(this.currentForm);
+		$('#issleeping').text(this.isSleeping);
+		$('#agenumber').text(this.age);
+		$('#happinessnumber').text(this.happiness);
+
 
 	},
 
 	isAsleep: function(){
 		this.isSleeping = true;
 		this.happiness += 1;
+		this.age +1;
 		// $('#issleeping').empty();
-		$('#issleeping').text("Yes");
+		$('#issleeping').text("true");
 		// $('#speechbubble').empty();
 		$('#speechbubble').text("Even the beef gods need beauty sleep");
 		console.log("Even the beef gods need beauty sleep");
+		$('#hungernumber').text(this.hungerValue);
+		$('#currentformtext').text(this.currentForm);
+		$('#issleeping').text(this.isSleeping);
+		$('#agenumber').text(this.age);
+		$('#happinessnumber').text(this.happiness);
 
 	},
 
 	increaseAge: function(){
 		this.age += 1;
+		if (this.happiness <= 5){
+			this.age +1;
+		}
 		this.morph(this.age);
+		$('#hungernumber').text(this.hungerValue);
+		$('#currentformtext').text(this.currentForm);
+		$('#issleeping').text(this.isSleeping);
 		$('#agenumber').text(this.age);
+		$('#happinessnumber').text(this.happiness);
 	},
 	increaseHappiness: function(){
+		this.happiness +=1;
 		if(this.happiness <= 5){
 			$('#speechbubble').text("I don't feel very bomb dot com");
 			console.log("I don't feel very bomb dot com");
@@ -106,6 +129,7 @@ var tomagotchi ={
 			$('#speechbubble').text("I feel super duper, OUTTA BOUNDS!");
 			console.log("I feel super duper, OUTTA BOUNDS!");
 			$('#happinessnumber').text(this.happiness);
+
 		}
 	},
 
