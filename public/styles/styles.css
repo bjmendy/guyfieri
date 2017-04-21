@@ -83,7 +83,7 @@ body {
 #container {
   width: 740px;
   height: 660px;
-  margin-left: 10%;
+  margin-left: 7%;
   margin-top: -5%;
   padding: 1px;
 }
@@ -136,8 +136,8 @@ body {
   border: none;
   background-image: url("photos/wing.png");
   padding: 1px;
-  height: 208px;
-  width: 250px;
+  height: 150px;
+  width: 195px;
   cursor: pointer;
   font-family: 'Press Start 2P', Sans-Serif;
   text-align: center;
@@ -163,14 +163,13 @@ body {
   height: 230px;
   width: 256px;
   float: right;
-  clear: both;
   background-image: url("photos/burger-outline-filled.png");
 }
 #hamburger:hover {
   cursor: pointer;
 }
 #hamburgermenu {
-  height: 50%;
+  height: 225px;
   width: 25%;
   overflow: scroll;
   margin-left: 60%;
@@ -189,6 +188,7 @@ body {
   float: left;
   width: 100px;
   height: 70px;
+  margin-left: -7%;
 }
 #loginh2 {
   float: left;
@@ -239,8 +239,8 @@ body {
   padding: 5px;
 }
 #chickenwingcontainer {
-  margin-left: 7%;
-  width: 785px;
+  margin-left: -7%;
+  width: 860px;
   height: 150px;
 }
 #feedbtn {
@@ -252,6 +252,10 @@ body {
   background-repeat: no-repeat;
 }
 #sleepbtn {
+  display: inline;
+  background-repeat: no-repeat;
+}
+#agebtn {
   display: inline;
   background-repeat: no-repeat;
 }

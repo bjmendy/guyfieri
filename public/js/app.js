@@ -6,7 +6,7 @@
 //happiness property
 //sleeping property (boolean)
 //go to sleep METHOD
-
+var username;
 // Get the modal
 var modal = document.getElementById('myModal');
 
@@ -15,6 +15,10 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the window, open the modal 
  $(document).ready(function(){
+ 	//ajax call should go here, but unfortunately
+ 	//it messed up with some jquery functions
+ 	//and I couldn't implement it
+
  	modal.style.display = "inline-block";
     });
 
@@ -60,15 +64,19 @@ var tomagotchi ={
 	morph: function(){
 		if(this.age === 0){
 			this.currentForm = "Pastrami";
-		}else if (this.age === 5){
-			this.currentForm = "Meat Mayonaise";
-		}else if (this.age >=25){
+		}else if (this.age >= 5){
+			this.currentForm = "Gravy Train";
+			$('#currentformtext').text(this.currentForm);
+		}else if (this.age >=10){
 			this.currentForm = "Winner Winner Chicken Dinner";
-		} else if (this.age === 35){
+			$('#currentformtext').text(this.currentForm);
+			console.log("this is greater than 10");
+		} else if (this.age >= 12){
 			this.currentForm = "Gordon Ramsay";
+			$('#one').css('background-image', 'url(/styles/photos/gordon.png)');
+			$('#currentformtext').text(this.currentForm);
 		}
 		$('#hungernumber').text(this.hungerValue);
-		$('#currentformtext').text(this.currentForm);
 		$('#issleeping').text(this.isSleeping);
 		$('#agenumber').text(this.age);
 		$('#happinessnumber').text(this.happiness);
@@ -82,6 +90,7 @@ var tomagotchi ={
 		// $('#speechbubble').empty();
 		$('#speechbubble').text("Up and at 'em here in Flavortown!");
 		console.log("Up and at 'em here in Flavortown!");
+
 		$('#hungernumber').text(this.hungerValue);
 		$('#currentformtext').text(this.currentForm);
 		$('#issleeping').text(this.isSleeping);
@@ -138,13 +147,17 @@ var tomagotchi ={
 			this.currentForm = "Gordon Ramsay";
 			$('#speechbubble').text(this.username + ", you fucking died, you donkey!");
 			console.log(this.username + ", you fucking died, you donkey!");
-		}else if (this.age <= 35){
-			$('#one').replaceWith("<img src='photos/gordon.png' />");
+
+			$('#one').css('background-image', 'url(/styles/photos/gordon.png)');
+		}else if (this.age >= 16){
+			$('#one').css('background-image', 'url(/styles/photos/gordon.png)');
 			$('#speechbubble').text(this.username + ", you fucking died, you old piece of shit!");
 			console.log(this.username + ", you fucking died, you old piece of shit!");
 			this.currentForm = "Gordon Ramsay";
-		}else if (this.hungerValue <= 35){
+			$('#one').css('background-image', 'url(/styles/photos/gordon.png)');
+		}else if (this.hungerValue >= 35){
 			$('#speechbubble').text(this.username + ", you ate too much, you idiot!");
+			$('#one').css('background-image', 'url(/styles/photos/gordon.png)');
 		}
 	},
 
@@ -153,6 +166,7 @@ var tomagotchi ={
 			$('#rip').text("Guy Fieri is rolling out RIP");
 			console.log("Guy Fieri is rolling out RIP");
 			this.death = true;
+			$('#one').css('background-image', 'url(/styles/photos/gordon.png)');
 		}
 	}
 }
@@ -192,8 +206,19 @@ $('#sleepbtn').click(function(){
 		$('#two').addClass('hidden');
 		$('#one').removeClass('hidden');
 	}, 1000)
+
+	//put in a counter that is disvisible by 2
 });
 
+$('#agebtn').click(function(){
+	tomagotchi.morph();
+	$('#one').addClass('hidden');
+	$('#two').removeClass('hidden');
+	setTimeout(function(){
+		$('#two').addClass('hidden');
+		$('#one').removeClass('hidden');
+	}, 1000)
+});
 
 
 //Vanilla event listeners just in case
@@ -208,25 +233,17 @@ var sleep = document.getElementById("sleepbtn");
 var face = document.getElementById("one");
 
 
+//this will call the functions to show death and death
+//by aging, which has jquery in it that will render
+//different photos and end the game
+$('.btn').click(function(){
+	tomagotchi.death();
+	tomagotchi.checkDeathByAging();
+	// $('#one').css('background-image', 'url(/styles/photos/gordon.png)');
+});
 
-//UPDATE THE FRAME???
-// var i = 1;
-// setInterval(function(){
-// 	var firstDiv = document.getElementById(i);
-// 	if (i % 2 === 0){
-// 		i = 1;
-// 	}else{
-// 		i += 1;
-// 	}
-// 	var secondDiv = document.getElementById(i);
-// 	firstDiv.classList.add("hidden");
-// 	secondDiv.classList.remove("hidden");
-// }, 6000)
-
-////function to evolve////add a label for happiness//
-
-
-
-
+//sound files
+// var audioElement = document.createElement('audio');
+// audioElement.setAttribute('/styles/soundfiles/LAMBSAUCE.mp3');
 
 
